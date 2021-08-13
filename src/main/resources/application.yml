@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://postgres_db:5432/jobrunr
+    username: postgres
+    password: secret
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  servlet.context-path: /
+
+org:
+  jobrunr:
+    background-job-server:
+      enabled: true
+      poll-interval-in-seconds: 5                       # Check for new work every 5 seconds [Default is 15]
+      delete_succeeded_jobs_after: 36                   # Succeeded jobs will go to the deleted state after 168 hours / 1 week [Default is 36]
+      permanently_delete_deleted_jobs_after: 72         # Deleted jobs will be deleted permanently after 504 hours / 3 weeks [Default is 72]
+    dashboard:
+      enabled: true
+      username: admin
+      password: secret
+
+management:
+  endpoints:
+    web:
+      base-path: /jobrunr/api/management
+      exposure:
+        include:
+        - health
