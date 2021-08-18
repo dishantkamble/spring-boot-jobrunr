@@ -8,7 +8,7 @@ services:
       - 8000:8000
     depends_on:
       - postgres_db
-  db:
+  postgres_db:
     image: "postgres:latest"
     restart: always
     ports:
