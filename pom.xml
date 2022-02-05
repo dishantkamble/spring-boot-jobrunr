@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<jobrunr.version>4.0.7</jobrunr.version>
+		<jobrunr.version>4.0.8</jobrunr.version>
 		<postgresql.version>42.3.2</postgresql.version>
 	</properties>
 
