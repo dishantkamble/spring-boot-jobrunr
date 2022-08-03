@@ -15,4 +15,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build Docker image
-      run: docker build . --file Dockerfile --tag dishant/${{ github.repository }}:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ github.repository }}:$(date +%s)
