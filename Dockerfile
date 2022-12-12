@@ -1,4 +1,4 @@
-FROM maven:3.8.6-openjdk-11-slim AS build
+FROM maven:3.8-openjdk-18-slim AS build
 LABEL maintainer="dishantk@gmail.com"
 WORKDIR /build
 COPY src /build/src
