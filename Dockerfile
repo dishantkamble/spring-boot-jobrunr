@@ -6,6 +6,6 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -B
 RUN mvn package -DskipTests
 
-FROM openjdk:20-jdk-slim
+FROM openjdk:21-jdk-slim
 COPY --from=build /build/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
