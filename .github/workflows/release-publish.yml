@@ -27,7 +27,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml install
     - name: Create Release
-      uses: ncipollo/release-action@v1.13.0
+      uses: ncipollo/release-action@v1.14.0
       with:
         tag: ${{ steps.bump.outputs.version }}
         generateReleaseNotes: true
