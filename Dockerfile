@@ -6,6 +6,6 @@ COPY pom.xml .
 RUN mvn dependency:go-offline -B
 RUN mvn package -DskipTests
 
-FROM openjdk:25-jdk-slim
+FROM sapmachine:lts-jre-headless-ubuntu
 COPY --from=build /build/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
