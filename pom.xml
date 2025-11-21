@@ -13,7 +13,7 @@
 	<groupId>com.dishant</groupId>
 	<artifactId>spring-boot-jobrunr</artifactId>
 	<!-- [bump] -->
-	<version>1.0.69</version>
+	<version>1.0.70</version>
 
 	<properties>
 		<java.version>11</java.version>
